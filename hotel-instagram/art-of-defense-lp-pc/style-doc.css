@@ -1,0 +1,202 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f4f7f9; /* 明るく清潔感のある背景色 */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    margin: 0;
+}
+
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1100px;
+    width: 100%;
+    background-color: #fff;
+    padding: 4rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 左側：資料プレビュー */
+.document-preview .image-placeholder {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder p {
+    color: #6c757d;
+    font-size: 1rem;
+    padding: 4rem 2rem;
+}
+
+.reassuring-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.reassuring-text p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #495057;
+}
+
+.reassuring-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reassuring-text li {
+    margin-bottom: 0.75rem;
+    color: #495057;
+    line-height: 1.8;
+}
+
+/* 右側：フォーム */
+.form-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.form-header h2 span {
+    color: #007bff;
+}
+
+.form-header p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.privacy-policy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-policy input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.privacy-policy label {
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.privacy-policy a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    
+    body {
+        padding: 1rem;
+    }
+}
+/* パンくず - 最小限のスタイル */
+.breadcrumb-minimal {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 100;
+  font-size: 0.7rem;
+  opacity: 0.5;
+}
+.breadcrumb-minimal ol {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb-minimal li {
+  display: inline;
+  color: rgba(255,255,255,0.7);
+}
+.breadcrumb-minimal a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .breadcrumb-minimal { display: none; }
+}
